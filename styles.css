@@ -1,5 +1,41 @@
+/* GENERAL STYLING */
+:root {
+  font-size: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  max-width: 1600px;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+}
+
+p {
+  max-width: 500px;
+  font-size: 1.8rem;
+}
+
+main {
+  max-width: 1248px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100vh;
+}
+
+/* HEADER SECTION */
+.nav-container {
+  max-width: 1120px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: pink;
+  padding: 30px 0;
+  font-family: Helvetica;
 }
