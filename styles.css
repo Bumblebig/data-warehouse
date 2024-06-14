@@ -21,6 +21,7 @@ body {
   transition: all 0.5s ease-in-out;
   font-weight: 400;
   overflow-x: hidden;
+  color: var(--data-grey);
 }
 
 p {
@@ -46,6 +47,11 @@ main {
 }
 
 /* HEADER AND NAV SECTION */
+.header {
+  padding-bottom: 100px;
+  width: 100%;
+}
+
 .nav-section-container {
   width: 100%;
   padding: 30px 0;
@@ -57,7 +63,8 @@ main {
 .nav-container {
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 150px;
+  width: 100%;
 }
 
 ul {
@@ -91,9 +98,11 @@ a.bold-nav:visited {
   font-weight: normal;
   background-color: #ffffff;
   box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.11);
-  font-size: 1.6rem;
   position: relative;
   color: var(--data-blue);
+  font-size: 1.6rem;
+  font-weight: 600;
+  min-width: 210px;
 }
 
 .nav-button:hover {
@@ -157,4 +166,46 @@ a.bold-nav:visited {
 .hero-image {
   display: block;
   width: 125%;
+}
+
+/* DESCRIPTION SECTION */
+.help {
+  background-color: rgba(240, 99, 184, 0.15);
+  border-radius: 50px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* padding: 10px 40px; */
+  gap: 60px;
+  margin: 0 auto 100px auto;
+}
+
+.help-image-container {
+  max-width: 477px;
+}
+
+.help-image {
+  width: 100%;
+  display: block;
+}
+
+.help-text {
+  max-width: 475px;
+  width: 100%;
+}
+
+.help-heading {
+  color: var(--data-blue);
+  font-family: Helvetica, sans-serif;
+  width: 100%;
+  font-size: 4rem;
+}
+
+.help-text {
+  max-width: 474px;
+  width: 100%;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  line-height: 1.5;
 }
