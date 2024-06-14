@@ -1,57 +1,3 @@
-/* EXTERNAL FONTS */
-@font-face {
-  font-family: "Avenir";
-  src: url("assets/fonts/AvenirLTStd-Light.otf") format("otf");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("assets/fonts/AvenirLTStd-Medium.otf") format("otf");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir";
-  src: url("assets/fonts/AvenirLTStd-Heavy.otf") format("otf");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica"), url("assests/fonts/Helvetica.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Helvetica Rounded Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica Rounded Bold"),
-    url("assests/fonts/helvetica-rounded-bold-5871d05ead8de.woff")
-      format("woff");
-}
-
-@font-face {
-  font-family: "Helvetica";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica"),
-    url("assests/fonts/Helvetica-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Helvetica Light";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Helvetica Light"),
-    url("assests/fonts/helvetica-light-587ebe5a59211.woff") format("woff");
-}
-
 /* GENERAL STYLING */
 :root {
   font-size: 10px;
@@ -69,10 +15,12 @@
 }
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: "sen", sans-serif;
   max-width: 1600px;
   margin: auto;
   transition: all 0.5s ease-in-out;
+  font-weight: 400;
+  overflow-x: hidden;
 }
 
 p {
@@ -80,6 +28,7 @@ p {
   font-size: 1.8rem;
 }
 
+/* Standardised sections widths to 1248px for visual consistency */
 main {
   max-width: 1248px;
   margin-left: auto;
@@ -88,14 +37,21 @@ main {
   height: 100vh;
 }
 
-/* HEADER SECTION */
+.button {
+  cursor: pointer;
+  padding: 15px 20px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+}
+
+/* HEADER AND NAV SECTION */
 .nav-section-container {
-  max-width: 1120px;
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: pink;
   padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-container {
@@ -119,8 +75,8 @@ a.header-nav:link,
 a.header-nav:visited {
   font-size: 1.6rem;
   display: inline-block;
-  font-weight: 500;
   color: var(--data-grey);
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -128,9 +84,77 @@ a.bold-nav:link,
 a.bold-nav:visited {
   color: var(--data-blue);
   font-weight: 600;
-  transform: translateY(-3px);
+  transform: translateY(-1px);
 }
 
-.different {
-  font-family: "Avenir";
+.nav-button {
+  font-weight: normal;
+  background-color: #ffffff;
+  box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.11);
+  font-size: 1.6rem;
+  position: relative;
+  color: var(--data-blue);
+}
+
+.nav-button:hover {
+  box-shadow: -2px 3px 5px rgba(0, 0, 0, 0.141);
+}
+
+.nav-arrow {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  margin-left: 15px;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 100px;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 645px;
+  width: 60%;
+  padding-bottom: 50px;
+}
+
+.hero-heading {
+  font-family: Helvetica, sans-serif;
+  color: var(--data-blue);
+  font-size: 8rem;
+  font-weight: bold;
+  width: 100%;
+  line-height: 1;
+  margin-bottom: 60px;
+}
+
+.hero-desc {
+  max-width: 380px;
+  font-size: 1.8rem;
+  color: var(--data-grey);
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 60px;
+  width: 38rem;
+}
+
+.hero-button {
+  color: #fff;
+  background-color: var(--data-violet);
+  width: max-content;
+  font-size: 1.8rem;
+}
+
+.illustration-container {
+  max-width: 885px;
+  width: 60%;
+  transform: translateX(-180px);
+}
+
+.hero-image {
+  display: block;
+  width: 125%;
 }
