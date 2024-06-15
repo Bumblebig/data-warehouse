@@ -2,28 +2,40 @@
 const helpButton = document.querySelector(".help-button");
 const featuresButton = document.querySelector(".features-button");
 const signupButton = document.querySelector(".signup-button");
+const mobileHelp = document.querySelector(".mobile-help");
+const mobilefeatures = document.querySelector(".mobile-features");
+const mobileSignup = document.querySelector(".mobile-sign-up");
 
 const help = document.querySelector(".help");
 const features = document.querySelector(".features");
 const signupCTA = document.querySelector(".cta");
+
+// MOBILE NAVS
+const hamburger = document.querySelector(".hamburger");
+const cancel = document.querySelector(".cancel");
+const mobileNavs = document.querySelector(".mobile-nav-menus");
+const bg = document.querySelector(".click-bg");
+const allLinks = document.querySelectorAll(".mobile-header-nav");
 
 // Scroll to section
 const sectionScroll = function (section) {
   section.scrollIntoView({ behavior: "smooth" });
 };
 
+const scroll = function (element, location) {
+  element.addEventListener("click", function () {
+    sectionScroll(location);
+  });
+};
+
 const scrollEvent = function () {
-  helpButton.addEventListener("click", function () {
-    sectionScroll(help);
-  });
+  scroll(helpButton, help);
+  scroll(featuresButton, features);
+  scroll(signupButton, signupCTA);
 
-  featuresButton.addEventListener("click", function () {
-    sectionScroll(features);
-  });
-
-  signupButton.addEventListener("click", function () {
-    sectionScroll(signupCTA);
-  });
+  scroll(mobileHelp, help);
+  scroll(mobilefeatures, features);
+  scroll(mobileSignup, signupCTA);
 };
 scrollEvent();
 
@@ -107,12 +119,6 @@ dots.forEach((dot, index) => {
 showSlide(currentSlide);
 
 // MOBILE NAVS
-const hamburger = document.querySelector(".hamburger");
-const cancel = document.querySelector(".cancel");
-const mobileNavs = document.querySelector(".mobile-nav-menus");
-const bg = document.querySelector(".click-bg");
-const allLinks = document.querySelectorAll(".mobile-header-nav");
-
 hamburger.addEventListener("click", function () {
   mobileNavs.classList.remove("hidden");
   bg.classList.remove("hidden");
@@ -133,4 +139,12 @@ allLinks.forEach((link) => {
     mobileNavs.classList.add("hidden");
     bg.classList.add("hidden");
   });
+});
+
+// Toggle off mobile nav if swindow greater than 500px
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 860) {
+    mobileNavs.classList.add("hidden");
+    bg.classList.add("hidden");
+  }
 });
