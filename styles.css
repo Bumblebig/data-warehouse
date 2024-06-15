@@ -17,7 +17,7 @@
 body {
   font-family: "sen", sans-serif;
   max-width: 1600px;
-  margin: auto;
+  margin: 0px auto;
   transition: all 0.5s ease-in-out;
   font-weight: 400;
   overflow-x: hidden;
@@ -321,4 +321,143 @@ a.learn-prompt:visited {
 
 .item-4 .item-desc {
   margin-bottom: 20px;
+}
+
+/* TESTIMONIAL SECTION */
+.testimonials {
+  background-color: var(--data-violet);
+  color: #fff;
+  width: 90%;
+  border-radius: 50px;
+  padding: 100px 0px 50px 90px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.testimonials-title {
+  font-size: 4rem;
+  font-family: Helvetica, sans-serif;
+}
+
+.testimonials-container {
+  height: 335px;
+  margin-top: 100px;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.comments {
+  max-width: 645px;
+  width: 645px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid var(--data-violet);
+  color: var(--data-grey);
+  display: flex;
+  align-items: flex-start;
+  padding: 50px;
+  border-radius: 20px;
+  gap: 30px;
+  position: absolute;
+  z-index: 5;
+}
+
+.user-text {
+  padding: 15px;
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.work {
+  font-size: 1.4rem;
+  color: var(--data-violet);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.testimony {
+  font-size: 1.8rem;
+}
+
+.carousel-2 {
+  transform: translateX(670px);
+}
+
+.carousel-3 {
+  transform: translateX(1100px);
+}
+
+.carousel-4 {
+  transform: translateX(1530px);
+}
+
+.overflowing {
+  overflow: hidden;
+  max-width: 400px;
+  /* position: relative; */
+}
+
+.overflowing .testimony {
+  width: 385px;
+}
+
+.overflowing .layover {
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 15;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 33%,
+    rgb(255, 255, 255) 73%
+  );
+}
+
+.switch {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.dot-active {
+  background-color: var(--data-indigo);
+  width: 10px;
+  height: 10px;
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 60px;
+}
+
+.arr {
+  cursor: pointer;
 }
