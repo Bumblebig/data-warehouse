@@ -25,8 +25,9 @@ body {
 }
 
 p {
-  max-width: 500px;
+  /* max-width: 500px; */
   font-size: 1.8rem;
+  line-height: 1.5;
 }
 
 /* Standardised sections widths to 1248px for visual consistency */
@@ -199,7 +200,8 @@ a.bold-nav:visited {
   color: var(--data-blue);
   font-family: Helvetica, sans-serif;
   width: 100%;
-  font-size: 4rem;
+  font-size: 3.5rem;
+  line-height: 1.2;
 }
 
 .help-text {
@@ -208,4 +210,70 @@ a.bold-nav:visited {
   font-size: 1.8rem;
   margin-top: 40px;
   line-height: 1.5;
+}
+
+/* FEATURES SECTION */
+.features h2 {
+  font-size: 4rem;
+  color: var(--data-blue);
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.sub-text {
+  text-align: center;
+  max-width: 584px;
+  width: 100%;
+  margin: 30px auto 50px auto;
+}
+
+.featured-items-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.feature-item {
+  max-width: 530px;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  background-repeat: no-repeat;
+  background-size: 442px;
+  background-position: top right;
+  padding: 98px 0px 50px 0px;
+}
+
+.item-heading {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--data-blue);
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.item-desc {
+  font-size: 1.6rem;
+  max-width: 220px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+a.learn-prompt:link,
+a.learn-prompt:visited {
+  color: var(--data-blue);
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.prompt-arrow {
+  width: 20px;
+  position: relative;
+  top: 2.5px;
+  margin-left: 14px;
+}
+
+.item-1 {
+  background-image: url("assets/search-data-bg.png");
 }
