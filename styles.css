@@ -970,7 +970,7 @@ a.footer-nav:visited {
   .sections,
   .cta-container,
   footer {
-    padding-right: 10px;
+    padding-right: 0px;
     padding-left: 10px;
   }
 }
