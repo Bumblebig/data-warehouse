@@ -105,3 +105,32 @@ dots.forEach((dot, index) => {
 });
 
 showSlide(currentSlide);
+
+// MOBILE NAVS
+const hamburger = document.querySelector(".hamburger");
+const cancel = document.querySelector(".cancel");
+const mobileNavs = document.querySelector(".mobile-nav-menus");
+const bg = document.querySelector(".click-bg");
+const allLinks = document.querySelectorAll(".mobile-header-nav");
+
+hamburger.addEventListener("click", function () {
+  mobileNavs.classList.remove("hidden");
+  bg.classList.remove("hidden");
+});
+
+cancel.addEventListener("click", function () {
+  mobileNavs.classList.add("hidden");
+  bg.classList.add("hidden");
+});
+
+bg.addEventListener("click", function () {
+  mobileNavs.classList.add("hidden");
+  bg.classList.add("hidden");
+});
+
+allLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    mobileNavs.classList.add("hidden");
+    bg.classList.add("hidden");
+  });
+});
