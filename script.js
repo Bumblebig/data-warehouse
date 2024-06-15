@@ -22,6 +22,7 @@ const sectionScroll = function (section) {
   section.scrollIntoView({ behavior: "smooth" });
 };
 
+// Click to scroll event listener for buttons
 const scroll = function (element, location) {
   element.addEventListener("click", function () {
     sectionScroll(location);
@@ -49,6 +50,7 @@ const rotatedRight = document.querySelector(".rot-right");
 let currentSlide = 0;
 
 function updateArrows() {
+  // Arrow prompt depending on the element number
   if (currentSlide === 0) {
     leftArrow.classList.add("hidden");
     rightArrow.classList.add("hidden");
@@ -62,18 +64,24 @@ function updateArrows() {
   }
 }
 
+// Centers a particular slide element
 function showSlide(index) {
   slides.forEach((slide, i) => {
     if (i === index) {
+      // add visibility to current element
       slide.classList.remove("overflowing");
       slide.querySelector(".layover").classList.add("hidden");
     } else {
+      //retrict visibility on every other element apart from current
       slide.classList.add("overflowing");
       slide.querySelector(".layover").classList.remove("hidden");
     }
+
+    // Move slides
     slide.style.transform = `translateX(${(i - index) * 670}px)`;
   });
 
+  //   make respective dots active with respect to current slide
   dots.forEach((dot, i) => {
     dot.classList.toggle("dot-active", i === index);
   });
@@ -81,6 +89,7 @@ function showSlide(index) {
   updateArrows();
 }
 
+// Slide movement by arrows
 leftArrow.addEventListener("click", () => {
   if (currentSlide > 0) {
     currentSlide -= 1;
@@ -109,6 +118,7 @@ rotatedRight.addEventListener("click", () => {
   }
 });
 
+// Move slide by dots
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     currentSlide = index;
