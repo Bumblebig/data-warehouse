@@ -31,12 +31,13 @@ p {
 }
 
 /* Standardised sections widths to 1248px for visual consistency */
-main {
+.sections,
+.cta-container,
+footer {
   max-width: 1248px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 100vh;
 }
 
 .button {
@@ -462,4 +463,121 @@ a.learn-prompt:visited {
 
 .arr {
   cursor: pointer;
+}
+
+/* CALL TO ACTION SECTION */
+.cta {
+  margin-top: 50px;
+  border-top: 1px solid #9b69e241;
+}
+
+.cta-container {
+  padding: 100px 90px;
+}
+
+.cta-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta-heading {
+  font-size: 4rem;
+  color: var(--data-blue);
+  font-family: Helvetica, sans-serif;
+  margin-bottom: 40px;
+}
+
+.cta-desc {
+  font-size: 1.8rem;
+}
+
+.cta-learn-button {
+  background-color: var(--data-indigo);
+  margin-right: 10px;
+}
+
+/* FOOTER SECTION */
+footer {
+  padding: 100px;
+  padding-bottom: 50px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-logo-container {
+  color: var(--data-blue);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.address {
+  max-width: 335px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--data-blue);
+  margin-top: 55px;
+  margin-bottom: 20px;
+}
+
+a.contacts:link,
+a.contacts:visited {
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: block;
+  color: var(--data-blue);
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.footer-navs {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.footer-nav-heading {
+  color: var(--data-blue);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.footer-navs-container {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+}
+
+a.footer-nav:link,
+a.footer-nav:visited {
+  display: block;
+  color: var(--data-blue);
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.icons-container {
+  margin-top: 50px;
+  display: flex;
+  gap: 15px;
+}
+
+.copyrights-container {
+  margin-top: 100px;
+}
+
+.copyrights,
+.company-reg-number {
+  color: var(--data-blue);
+  font-size: 1.2rem;
+  font-weight: 400;
 }
