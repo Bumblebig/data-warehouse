@@ -970,8 +970,92 @@ a.footer-nav:visited {
   .sections,
   .cta-container,
   footer {
-    padding-right: 0px;
+    padding-right: 10px;
     padding-left: 10px;
+  }
+
+  .help {
+    width: 90%;
+  }
+
+  .features h2 {
+    font-size: 2rem;
+  }
+
+  .sub-text {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.4rem;
+  }
+
+  .feature-item {
+    transform: scale(0.68);
+  }
+
+  .testimonials {
+    padding: 50px 10px 30px 10px;
+  }
+
+  .testimonials-title {
+    font-size: 2rem;
+  }
+
+  .testimonials-container {
+    margin-top: 20px;
+  }
+
+  .cta {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .cta-heading {
+    font-size: 2rem;
+  }
+
+  .cta-desc {
+    font-size: 1.4rem;
+  }
+
+  .cta-learn-button,
+  .cta-request-button {
+    transform: scale(0.85);
+  }
+
+  .footer-logo-container {
+    font-size: 2rem;
+  }
+
+  .address {
+    width: 90%;
+  }
+
+  footer {
+    padding-bottom: 30px;
+  }
+
+  .footer-navs {
+    flex-flow: column;
+    gap: 50px;
+    margin-top: 20px;
+  }
+
+  .footer-navs-container {
+    margin-top: 10px;
+    gap: 20px;
+  }
+
+  .icons-container {
+    margin-top: 10px;
+  }
+
+  .icons {
+    width: 35px;
+  }
+
+  .copyrights-container {
+    margin-top: 50px;
   }
 }
 
