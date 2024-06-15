@@ -26,3 +26,88 @@ const scrollEvent = function () {
   });
 };
 scrollEvent();
+
+// SLIDER
+const slides = document.querySelectorAll(".comments");
+const dots = document.querySelectorAll(".dot");
+const leftArrow = document.querySelector(".left-arr");
+const rightArrow = document.querySelector(".right-arr");
+const rotatedLeft = document.querySelector(".rot-left");
+const rotatedRight = document.querySelector(".rot-right");
+let currentSlide = 0;
+
+function updateArrows() {
+  if (currentSlide === 0) {
+    leftArrow.classList.add("hidden");
+    rightArrow.classList.add("hidden");
+    rotatedLeft.classList.remove("hidden");
+    rotatedRight.classList.remove("hidden");
+  } else {
+    leftArrow.classList.remove("hidden");
+    rightArrow.classList.remove("hidden");
+    rotatedLeft.classList.add("hidden");
+    rotatedRight.classList.add("hidden");
+  }
+
+  //   if (currentSlide === slides.length - 1) {
+  //     rightArrow.classList.add("hidden");
+  //   } else {
+  //     rightArrow.classList.remove("hidden");
+  //   }
+}
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    if (i === index) {
+      slide.classList.remove("overflowing");
+      slide.querySelector(".layover").classList.add("hidden");
+    } else {
+      slide.classList.add("overflowing");
+      slide.querySelector(".layover").classList.remove("hidden");
+    }
+    slide.style.transform = `translateX(${(i - index) * 670}px)`;
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("dot-active", i === index);
+  });
+
+  updateArrows();
+}
+
+leftArrow.addEventListener("click", () => {
+  if (currentSlide > 0) {
+    currentSlide -= 1;
+    showSlide(currentSlide);
+  }
+});
+
+rotatedLeft.addEventListener("click", () => {
+  if (currentSlide > 0) {
+    currentSlide -= 1;
+    showSlide(currentSlide);
+  }
+});
+
+rightArrow.addEventListener("click", () => {
+  if (currentSlide < slides.length - 1) {
+    currentSlide += 1;
+    showSlide(currentSlide);
+  }
+});
+
+rotatedRight.addEventListener("click", () => {
+  if (currentSlide < slides.length - 1) {
+    currentSlide += 1;
+    showSlide(currentSlide);
+  }
+});
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    currentSlide = index;
+    showSlide(currentSlide);
+  });
+});
+
+showSlide(currentSlide);

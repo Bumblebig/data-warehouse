@@ -349,6 +349,7 @@ a.learn-prompt:visited {
   gap: 20px;
   flex-shrink: 0;
   position: relative;
+  /* overflow: hidden; */
 }
 
 .comments {
@@ -366,6 +367,7 @@ a.learn-prompt:visited {
   position: absolute;
   z-index: 5;
   box-shadow: 0px 15px 3px rgba(0, 0, 0, 0.15);
+  transition: all ease-in-out 0.5s;
 }
 
 .user-text {
@@ -463,6 +465,11 @@ a.learn-prompt:visited {
 
 .arr {
   cursor: pointer;
+}
+
+.rot-right,
+.rot-left {
+  transform: rotate(180deg);
 }
 
 /* CALL TO ACTION SECTION */
@@ -580,4 +587,8 @@ a.footer-nav:visited {
   color: var(--data-blue);
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+.hidden {
+  display: none;
 }
