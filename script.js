@@ -48,12 +48,6 @@ function updateArrows() {
     rotatedLeft.classList.add("hidden");
     rotatedRight.classList.add("hidden");
   }
-
-  //   if (currentSlide === slides.length - 1) {
-  //     rightArrow.classList.add("hidden");
-  //   } else {
-  //     rightArrow.classList.remove("hidden");
-  //   }
 }
 
 function showSlide(index) {
