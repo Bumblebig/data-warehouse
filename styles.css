@@ -230,17 +230,28 @@ a.bold-nav:visited {
 .featured-items-container {
   width: 100%;
   padding: 20px;
+  /* background-color: #68c9ba; */
+}
+
+.feature-segment {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  /* background-color: pink; */
+  margin-bottom: 50px;
 }
 
 .feature-item {
   max-width: 530px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 25px;
   background-repeat: no-repeat;
   background-size: 442px;
   background-position: top right;
-  padding: 98px 0px 50px 0px;
+  /* background-color: white; */
 }
 
 .item-heading {
@@ -254,8 +265,8 @@ a.bold-nav:visited {
 .item-desc {
   font-size: 1.6rem;
   max-width: 220px;
-  width: 100%;
-  margin-bottom: 20px;
+  width: 220px;
+  margin-bottom: 35px;
 }
 
 a.learn-prompt:link,
@@ -276,4 +287,38 @@ a.learn-prompt:visited {
 
 .item-1 {
   background-image: url("assets/search-data-bg.png");
+  padding: 100px 80px 40px 0px;
+}
+
+.item-2 {
+  background-image: url("assets/access-bg.png");
+  padding: 60px 60px 35px 0px;
+  margin-top: 30px;
+}
+
+.item-3 {
+  background-image: url("assets/print-out-bg.png");
+  padding: 60px 90px 95px 0px;
+  margin-top: 5px;
+}
+
+.item-4 {
+  background-image: url("assets/security-bg.png");
+  padding: 65px 90px 35px 0px;
+}
+
+.item-2 .item-text {
+  margin-top: 20px;
+}
+
+.item-2 .item-desc {
+  margin-bottom: 49px;
+}
+
+.item-3 .item-desc {
+  margin-bottom: 92px;
+}
+
+.item-4 .item-desc {
+  margin-bottom: 20px;
 }
