@@ -739,7 +739,7 @@ a.footer-nav:visited {
 
   /* FEATURES SECTION */
   .features h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   /* TESTIMONIAL SECTION */
@@ -856,6 +856,10 @@ a.footer-nav:visited {
     box-shadow: 0px 8px 3px rgba(0, 0, 0, 0.15);
   }
 
+  .user-img {
+    width: 60px;
+  }
+
   .name {
     font-size: 1.6;
   }
@@ -874,6 +878,92 @@ a.footer-nav:visited {
 }
 
 @media only screen and (max-width: 590px) {
+  .sections,
+  .cta-container,
+  footer {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  /* HEADER */
+
+  .mobile-logo {
+    width: 30px;
+  }
+
+  .mobile-nav {
+    padding: 20px 0px;
+  }
+
+  .menu-icon {
+    width: 30px;
+  }
+
+  .hero-heading {
+    font-size: 3.5rem;
+  }
+
+  .hero-desc {
+    font-size: 1.6rem;
+    max-width: 100%;
+  }
+
+  /* DESCRIPTION */
+  .help-heading {
+    font-size: 2rem;
+  }
+
+  .help-text {
+    font-size: 1.4rem;
+  }
+
+  /* FEATURES */
+  .features h2 {
+    font-size: 2.5rem;
+  }
+
+  .sub-text {
+    font-size: 1.6rem;
+  }
+
+  .featured-items-container {
+    padding: 0px;
+  }
+
+  .feature-segment {
+    gap: 0px;
+    margin-bottom: 30px;
+  }
+
+  .feature-item {
+    transform: scale(0.85);
+  }
+
+  .item-3 {
+    padding-bottom: 50px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  /* CTA */
+  .cta-heading {
+    font-size: 2.5rem;
+  }
+
+  .cta-desc {
+    font-size: 1.6rem;
+  }
+
+  /* FOOTER */
+  .footer-navs {
+    width: 100%;
+    gap: 0px;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: 860px) {
