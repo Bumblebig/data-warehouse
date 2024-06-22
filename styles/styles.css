@@ -101,7 +101,9 @@ a.bold-nav:visited {
   transform: translateY(-1px);
 }
 
-.nav-button {
+.nav-button,
+a.nav-button:link,
+a.nav-button:visited {
   font-weight: normal;
   background-color: #ffffff;
   box-shadow: -1px 2px 4px rgba(0, 0, 0, 0.11);
@@ -110,6 +112,7 @@ a.bold-nav:visited {
   font-size: 1.6rem;
   font-weight: 600;
   min-width: 210px;
+  text-decoration: none;
 }
 
 .nav-button:hover {
@@ -289,24 +292,24 @@ a.learn-prompt:visited {
 }
 
 .item-1 {
-  background-image: url("assets/search-data-bg.png");
+  background-image: url("../assets/search-data-bg.png");
   padding: 100px 80px 40px 0px;
 }
 
 .item-2 {
-  background-image: url("assets/access-bg.png");
+  background-image: url("../assets/access-bg.png");
   padding: 60px 60px 35px 0px;
   margin-top: 30px;
 }
 
 .item-3 {
-  background-image: url("assets/print-out-bg.png");
+  background-image: url("../assets/print-out-bg.png");
   padding: 60px 90px 95px 0px;
   margin-top: 5px;
 }
 
 .item-4 {
-  background-image: url("assets/security-bg.png");
+  background-image: url("../assets/security-bg.png");
   padding: 65px 90px 35px 0px;
 }
 

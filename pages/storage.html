@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/storage.css">
+    <title>Abdurrahman | Data-Storage</title>
+    <script defer src="../scripts/storage.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <img src="../assets/Logo.png" alt="logo" class="main-logo">
+            <a href="/" class="home">Home</a>
+        </nav>
+    </header>
+
+    <section class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="form-container">
+        <form>
+            <p class="heading">New Item</p>
+            <div class="field-container">
+                <label for="id">Id:</label>
+                <input type="text" class="id field" id="id">
+            </div>
+
+            <div class="field-container">
+                <label for="name">Item Name:</label>
+                <input type="text" class="name field" id="name">
+            </div>
+
+            <div class="field-container">
+                <label for="price">Item Price:</label>
+                <input type="Number" class="price field" id="price">
+            </div>
+
+            <input type="submit" value="Add Item" class="submit">
+        </form>
+    </section>
+</body>
+
+</html>

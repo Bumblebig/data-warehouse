@@ -1,0 +1,86 @@
+/* GENERAL STYLING */
+:root {
+  font-size: 10px;
+  --data-grey: #4b5d68;
+  --data-blue: #212353;
+  --data-violet: #9c69e2;
+  --data-indigo: #f063b8;
+  --data-green: #68c9ba;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "sen", sans-serif;
+  max-width: 1600px;
+  margin: 0px auto;
+  transition: all 0.5s ease-in-out;
+  font-weight: 400;
+  overflow-x: hidden;
+  color: var(--data-grey);
+  position: relative;
+}
+
+/* NAV */
+header,
+.section,
+.form-container {
+  max-width: 1120px;
+  margin: 30px auto;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a.home:link,
+a.home:visited {
+  text-decoration: none;
+  color: var(--data-grey);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* TABLE */
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: 120px auto;
+  font-size: 1.8rem;
+  transition: inherit;
+  text-align: center;
+}
+
+table th {
+  font-size: 2rem;
+}
+
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #f1f3f5;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: var(--data-violet);
+  color: white;
+}
