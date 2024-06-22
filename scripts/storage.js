@@ -64,6 +64,8 @@ const classes = function (el, classname, state) {
 const addItem = function (e) {
   // Prevent browser reloading
   e.preventDefault();
+
+  // button visibility
   if (buttonState) {
     if (id.value && itemName.value && price.value) {
       // Add form data to array
