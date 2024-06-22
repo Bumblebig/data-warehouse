@@ -23,6 +23,7 @@ body {
   overflow-x: hidden;
   color: var(--data-grey);
   position: relative;
+  padding-bottom: 100px;
 }
 
 /* NAV */
@@ -39,6 +40,7 @@ header,
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 5px 20px;
 }
 
 a.home:link,
@@ -51,16 +53,20 @@ a.home:visited {
 
 /* TABLE */
 
+.table {
+  padding: 50px 0px;
+}
+
 table {
   border-collapse: collapse;
   width: 60%;
-  margin: 120px auto;
+  margin: 0px auto;
   font-size: 1.8rem;
   transition: inherit;
   text-align: center;
 }
 
-table th {
+th {
   font-size: 2rem;
 }
 
@@ -83,4 +89,142 @@ table th {
   padding-bottom: 12px;
   background-color: var(--data-violet);
   color: white;
+}
+
+/* FORM */
+
+.form-container {
+  border-top: 1px solid rgba(0, 0, 0, 0.173);
+  padding: 60px 0;
+  position: relative;
+}
+
+.add-new {
+  color: rgba(0, 0, 0, 0.378);
+  font-size: 1.4rem;
+  background-color: white;
+  width: max-content;
+  padding: 1px 12px;
+  z-index: 50;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+form {
+  background-color: #fff;
+  border-radius: 5px;
+  width: max-content;
+  margin: 0px auto;
+  font-size: 1.8rem;
+  padding: 40px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+  box-shadow: -2px 2px 8px 8px rgba(0, 0, 0, 0.048);
+}
+
+.heading {
+  color: var(--data-blue);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+label,
+input {
+  display: block;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.field {
+  width: 400px;
+  height: 40px;
+  font-family: "sen", sans-serif;
+  border: none;
+  outline: none;
+  transition: all 0.3s;
+  background-color: #f8f9fa;
+  padding: 0px 10px;
+  font-size: 1.6rem;
+  border-bottom: 1px solid var(--data-blue);
+}
+
+.field:focus,
+.field:active {
+  outline: none;
+  border-bottom: 3px solid var(--data-blue);
+}
+
+.submit {
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1.8rem;
+  background-color: var(--data-violet);
+  padding: 10px 0px;
+  text-align: center;
+  cursor: pointer;
+  font-family: "sen", sans-serif;
+  display: block;
+  width: 100%;
+}
+
+.submit:hover {
+  background-color: #9b69e2ea;
+}
+
+.error {
+  font-size: 1.6rem;
+  color: #e03131;
+  margin-bottom: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  table {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .table {
+    padding-top: 80px;
+  }
+
+  table {
+    width: 95%;
+    font-size: 1.6rem;
+  }
+
+  th {
+    font-size: 1.8rem;
+  }
+
+  form {
+    font-size: 1.6rem;
+    padding: 30px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .field {
+    font-size: 1.4rem;
+  }
+
+  .submit {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
 }

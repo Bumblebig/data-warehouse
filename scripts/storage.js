@@ -5,6 +5,7 @@ const id = document.querySelector("#id");
 const itemName = document.querySelector("#name");
 const price = document.querySelector("#price");
 const formButton = document.querySelector(".submit");
+const errorText = document.querySelector(".full");
 let itemData = [];
 
 // FUNCTIONS
@@ -20,11 +21,12 @@ const setLocalStorage = function () {
   localStorage.setItem("itemData", JSON.stringify(itemData));
 };
 
+// Display data to table
 const renderData = function () {
   // Remove existing data
   tableBody.innerHTML = "";
 
-  //   Format data as html elements
+  // Format data as html elements
   const html = itemData
     .map((item) => {
       return ` <tr>
@@ -50,8 +52,15 @@ const getLocalStorage = function () {
   renderData();
 };
 
+// Element classes
+const classes = function (el, classname, state) {
+  if (state) el.classList.add(classname);
+  else el.classList.remove(classname);
+};
+
+// Add item to table
 const addItem = function (e) {
-  // Prevent browser deafu;s
+  // Prevent browser reloading
   e.preventDefault();
 
   if (id.value && itemName.value && price.value) {
@@ -70,6 +79,12 @@ const addItem = function (e) {
 
     // Reset form
     reset();
+
+    // hide error messages and prompt
+    classes(errorText, "hidden", true);
+  } else {
+    // show error message
+    classes(errorText, "hidden", false);
   }
 };
 
