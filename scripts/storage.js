@@ -94,7 +94,9 @@ const addItem = function (e) {
       // show error message
       classes(errorText, "hidden", false);
     }
-  }
+    // disable button
+    classes(errorText, "hidden", true);
+  } else classes(errorText, "hidden", false);
 };
 
 const eventCheck = function () {
