@@ -178,6 +178,13 @@ label {
   background-color: #9b69e2ea;
 }
 
+.invalid,
+.invalid:hover {
+  background-color: rgba(0, 0, 0, 0.219);
+  color: #343a40;
+  cursor: not-allowed;
+}
+
 .error {
   font-size: 1.6rem;
   color: #e03131;

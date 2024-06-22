@@ -4,9 +4,11 @@ const form = document.querySelector("form");
 const id = document.querySelector("#id");
 const itemName = document.querySelector("#name");
 const price = document.querySelector("#price");
+const allFields = document.querySelectorAll(".field");
 const formButton = document.querySelector(".submit");
 const errorText = document.querySelector(".full");
 let itemData = [];
+let buttonState = false;
 
 // FUNCTIONS
 //////////////////////////////////////////////////////////////
@@ -62,29 +64,45 @@ const classes = function (el, classname, state) {
 const addItem = function (e) {
   // Prevent browser reloading
   e.preventDefault();
+  if (buttonState) {
+    if (id.value && itemName.value && price.value) {
+      // Add form data to array
+      itemData.push({
+        id: id.value.trim(),
+        name: itemName.value.trim(),
+        price: price.value.trim(),
+      });
 
+      // Show data
+      renderData();
+
+      // Save to localStorage
+      setLocalStorage();
+
+      // Reset form
+      reset();
+
+      // hide error messages and prompt
+      classes(errorText, "hidden", true);
+
+      // disable button
+      classes(formButton, "invalid", true);
+      buttonState = false;
+    } else {
+      // show error message
+      classes(errorText, "hidden", false);
+    }
+  }
+};
+
+const eventCheck = function () {
+  // enable and disable button
   if (id.value && itemName.value && price.value) {
-    // Add form data to array
-    itemData.push({
-      id: id.value.trim(),
-      name: itemName.value.trim(),
-      price: Number(price.value.trim()),
-    });
-
-    // Show data
-    renderData();
-
-    // Save to localStorage
-    setLocalStorage();
-
-    // Reset form
-    reset();
-
-    // hide error messages and prompt
-    classes(errorText, "hidden", true);
+    classes(formButton, "invalid", false);
+    buttonState = true;
   } else {
-    // show error message
-    classes(errorText, "hidden", false);
+    classes(formButton, "invalid", true);
+    buttonState = false;
   }
 };
 
@@ -95,3 +113,8 @@ const addItem = function (e) {
 getLocalStorage();
 formButton.addEventListener("click", (e) => addItem(e));
 form.addEventListener("submit", (e) => addItem(e));
+
+// Check for keypad clicks
+document.querySelector("body").addEventListener("keyup", function (e) {
+  eventCheck();
+});
