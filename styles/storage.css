@@ -196,7 +196,7 @@ label {
 
 @media only screen and (max-width: 700px) {
   .table {
-    padding-top: 80px;
+    padding-top: 60px;
   }
 
   table {
@@ -226,5 +226,16 @@ label {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 500px) {
+  .table {
+    padding-top: 40px;
+  }
+
+  form {
+    max-width: 90%;
+  }
+
+  .field {
+    max-width: 100%;
+  }
 }
